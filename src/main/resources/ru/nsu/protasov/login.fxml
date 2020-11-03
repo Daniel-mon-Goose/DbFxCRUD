@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="335.0" prefWidth="467.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.protasov.LoginController">
+   <children>
+      <Label contentDisplay="CENTER" text="Building Company Database">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="440.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginField" prefHeight="26.0" prefWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children></HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="41.0" prefWidth="427.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="108.0" text="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" prefHeight="36.0" prefWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" opacity="0.0" prefHeight="18.0" prefWidth="147.0" text="Incorrect login/password" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="primaryButton" onAction="#switchToMainMenu" text="Take me to SQL Zone" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

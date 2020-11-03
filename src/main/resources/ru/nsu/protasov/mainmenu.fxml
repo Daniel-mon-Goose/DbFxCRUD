@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.protasov.MainMenuController">
+  <tabs>
+    <Tab text="Custom Request">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="707.0">
+               <children>
+                  <TextArea fx:id="requestField" layoutX="14.0" layoutY="42.0" prefHeight="200.0" prefWidth="285.0" />
+                  <Button layoutX="170.0" layoutY="251.0" mnemonicParsing="false" onAction="#showRawRequestResult" prefHeight="30.0" prefWidth="129.0" text="Send Request">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="errorsField" editable="false" layoutX="314.0" layoutY="42.0" prefHeight="200.0" prefWidth="273.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Request">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="14.0" text="Errors">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Tables">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="120.0" layoutY="218.0" mnemonicParsing="false" onAction="#showTable" text="Show" />
+                  <ComboBox fx:id="tableChoice" layoutX="68.0" layoutY="121.0" onAction="#changeFilter" prefWidth="150.0" promptText="Choose a table" />
+                  <Label layoutX="123.0" layoutY="32.0" text="Tables">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="469.0" layoutY="32.0" text="Filters">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="filterData" editable="false" layoutX="413.0" layoutY="121.0" />
+                  <Label fx:id="filterSign" alignment="CENTER_RIGHT" layoutX="222.0" layoutY="124.0" prefHeight="18.0" prefWidth="184.0" text="Filter not available" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Users">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="dbUser" layoutX="248.0" layoutY="68.0" />
+                  <PasswordField fx:id="dbPassword" layoutX="248.0" layoutY="115.0" />
+                  <PasswordField fx:id="dbConfirmPassword" layoutX="248.0" layoutY="160.0" />
+                  <TextField fx:id="dbKeyword" layoutX="248.0" layoutY="231.0" />
+                  <Label alignment="CENTER" layoutX="103.0" layoutY="63.0" prefHeight="34.0" prefWidth="112.0" text="User" />
+                  <Label alignment="CENTER" layoutX="103.0" layoutY="118.0" prefHeight="18.0" prefWidth="115.0" text="Password" />
+                  <Label alignment="CENTER" layoutX="103.0" layoutY="163.0" prefHeight="18.0" prefWidth="120.0" text="Confirm password" />
+                  <Label alignment="CENTER" layoutX="103.0" layoutY="235.0" prefHeight="18.0" prefWidth="119.0" text="Keyword" />
+                  <Button layoutX="247.0" layoutY="281.0" mnemonicParsing="false" onAction="#findUser" prefHeight="26.0" prefWidth="149.0" text="Set/Update user" />
+                  <Label layoutX="133.0" layoutY="200.0" text="Q: What was the weirdest stuff you have ever done in your life?" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>

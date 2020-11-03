@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.protasov.SqlResultController">
+   <children>
+      <TableView id="sqlTable" fx:id="sqlTable" layoutX="14.0" layoutY="14.0" prefHeight="211.0" prefWidth="506.0" />
+      <Button id="back" layoutX="188.0" layoutY="240.0" mnemonicParsing="false" onAction="#turnPageBack" prefHeight="28.0" prefWidth="58.0" text="Prev" />
+      <Button layoutX="271.0" layoutY="240.0" mnemonicParsing="false" onAction="#turnPageForward" prefHeight="28.0" prefWidth="58.0" text="Next" />
+      <Button id="errorLabel" fx:id="addUpdateButton" layoutX="217.0" layoutY="360.0" mnemonicParsing="false" onAction="#addUpdate" text="Add/Update" />
+      <TableView fx:id="editTable" layoutX="14.0" layoutY="286.0" prefHeight="64.0" prefWidth="506.0" />
+   </children>
+</AnchorPane>
